@@ -6,6 +6,7 @@ app = Flask(__name__)
 app.secret_key = 'super-secret-key-for-pet-project'
 app.config['DATABASE'] = 'app.db'
 
+# Отримання підклоючення до бази даних
 def get_db():
     if 'db' not in g:
         g.db = sqlite3.connect(app.config['DATABASE'])
